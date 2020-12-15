@@ -1,0 +1,23 @@
+<footer class="footer">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4 pt-1">
+        2020 © {{ 'Shared.Other.12' | translate }} <span class="text-danger"></span><a href="https://www.facebook.com/darshan.nandekar">Darshan Nandekar</a>
+      </div>
+      <div class="col-md-6 pt-1">
+        <div class="text-md-right footer-links d-none d-sm-block">
+          <a href="https://www.facebook.com/darshan.nandekar"><span class="text-blue"><i class="fab fa-osi"></i></span> {{ 'Shared.Other.7' | translate }}</a>
+          <a href="https://www.linkedin.com/in/darshan-nandekar-99091aab/"><span class="text-warning"><i class="fas fa-mug-hot"></i></span> {{ 'Shared.Other.8' | translate }}</a>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <select #lang class="form-control form-control-sm" (change)="translate.use(lang.value)">
+          <option selected disabled>
+            {{ 'Shared.Other.20' | translate }}
+          </option>
+          <option *ngFor="let lang of translate.getLangs()" [value]="lang">{{lang}}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</footer>
